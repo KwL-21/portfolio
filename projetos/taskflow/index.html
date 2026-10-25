@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TaskFlow — Quadro Kanban</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="topbar__left">
+      <a href="../../#projetos" class="back" title="Voltar ao portfólio">←</a>
+      <h1>📋 TaskFlow</h1>
+    </div>
+    <div class="topbar__right">
+      <input type="search" id="busca" placeholder="Buscar tarefas..." aria-label="Buscar tarefas">
+      <button class="btn" id="nova">+ Nova tarefa</button>
+    </div>
+  </header>
+
+  <main class="board">
+    <section class="column" data-status="todo">
+      <header class="column__header"><h2>A fazer</h2><span class="count">0</span></header>
+      <div class="column__list" data-status="todo"></div>
+    </section>
+    <section class="column" data-status="doing">
+      <header class="column__header"><h2>Em andamento</h2><span class="count">0</span></header>
+      <div class="column__list" data-status="doing"></div>
+    </section>
+    <section class="column" data-status="done">
+      <header class="column__header"><h2>Concluído</h2><span class="count">0</span></header>
+      <div class="column__list" data-status="done"></div>
+    </section>
+  </main>
+
+  <dialog id="modal">
+    <form method="dialog" id="form">
+      <h2 id="modal-titulo">Nova tarefa</h2>
+      <label>Título
+        <input name="titulo" required maxlength="80" autocomplete="off">
+      </label>
+      <label>Descrição
+        <textarea name="descricao" rows="3" maxlength="300"></textarea>
+      </label>
+      <div class="row">
+        <label>Prioridade
+          <select name="prioridade">
+            <option value="baixa">Baixa</option>
+            <option value="media" selected>Média</option>
+            <option value="alta">Alta</option>
+          </select>
+        </label>
+        <label>Prazo
+          <input type="date" name="prazo">
+        </label>
+      </div>
+      <div class="modal__actions">
+        <button type="button" class="btn btn--danger" id="excluir" hidden>Excluir</button>
+        <span class="spacer"></span>
+        <button type="button" class="btn btn--ghost" id="cancelar">Cancelar</button>
+        <button type="submit" class="btn">Salvar</button>
+      </div>
+    </form>
+  </dialog>
+
+  <template id="card-tpl">
+    <article class="card" draggable="true" tabindex="0">
+      <span class="card__prio"></span>
+      <h3 class="card__title"></h3>
+      <p class="card__desc"></p>
+      <footer class="card__footer">
+        <span class="card__prazo"></span>
+      </footer>
+    </article>
+  </template>
+
+  <script src="app.js"></script>
+</body>
+</html>

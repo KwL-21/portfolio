@@ -1,0 +1,12 @@
+# Sistema operacional e editores
+.DS_Store
+Thumbs.db
+desktop.ini
+.vscode/
+.idea/
+
+# Dependências e arquivos locais
+vendor/
+node_modules/
+*.log
+.env

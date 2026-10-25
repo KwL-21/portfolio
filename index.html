@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kawã Lucio — Desenvolvedor Full Stack</title>
+  <meta name="description" content="Portfólio de Kawã Lucio (DEV-KwL), desenvolvedor full stack em Duque de Caxias/RJ. Sistemas web, APIs, integrações e apps mobile.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+  <header class="nav">
+    <div class="container nav__inner">
+      <a href="#inicio" class="nav__logo">&lt;DEV-KwL /&gt;</a>
+      <button class="nav__toggle" aria-label="Abrir menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <nav class="nav__menu">
+        <a href="#sobre">Sobre</a>
+        <a href="#experiencia">Experiência</a>
+        <a href="#habilidades">Habilidades</a>
+        <a href="#projetos">Projetos</a>
+        <a href="#contato" class="btn btn--small">Contato</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section id="inicio" class="hero">
+      <div class="container hero__inner">
+        <p class="hero__hello mono">Olá, meu nome é</p>
+        <h1 class="hero__title">Kawã Lucio.</h1>
+        <h2 class="hero__subtitle">Transformo problemas reais em soluções<span class="cursor">_</span></h2>
+        <p class="hero__text">
+          Sou desenvolvedor <strong>full stack</strong> em Duque de Caxias/RJ. Crio sistemas web,
+          APIs e apps mobile — da interface ao banco de dados, passando por integrações com
+          serviços externos.
+        </p>
+        <div class="hero__actions">
+          <a href="#projetos" class="btn">Ver projetos</a>
+          <a href="assets/curriculo.pdf" class="btn btn--ghost" download="Curriculo_Kawa_Lucio.pdf">Baixar currículo</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- SOBRE -->
+    <section id="sobre" class="section">
+      <div class="container about">
+        <div class="about__text reveal">
+          <h2 class="section__title"><span class="mono">01.</span> Sobre mim</h2>
+          <p>
+            Sou <strong>Analista de Sistemas</strong> e desenvolvedor de software. Crio soluções web e
+            mobile pensadas para necessidades reais, cuidando de todas as camadas: interface, regras de
+            negócio, banco de dados e integrações com outros serviços.
+          </p>
+          <p>
+            Trabalho principalmente com <strong>PHP, JavaScript, Python e SQL</strong> (MySQL e Oracle),
+            e com <strong>React Native e Expo</strong> no mobile. No dia a dia, investigo incidentes,
+            consumo APIs, automatizo processos e conecto as necessidades do negócio a soluções técnicas.
+          </p>
+          <p>
+            Curso Tecnologia da Informação na FAETERJ Petrópolis e sigo aprimorando arquitetura,
+            organização de código e APIs. Meu lema: aprender, construir e evoluir sempre.
+          </p>
+        </div>
+        <div class="about__photo reveal">
+          <div class="about__photo-frame">
+            <span>KwL</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- EXPERIÊNCIA -->
+    <section id="experiencia" class="section">
+      <div class="container">
+        <h2 class="section__title reveal"><span class="mono">02.</span> Experiência</h2>
+        <ol class="timeline">
+          <li class="timeline__item reveal">
+            <p class="timeline__date mono">nov. 2025 — atual</p>
+            <h3>Analista de Sistemas Jr. <span>@ Agile Corp</span></h3>
+            <ul>
+              <li>Análise e investigação de falhas em processos do ERP, integrações fiscais e rotinas corporativas, usando consultas SQL e inspeção de logs.</li>
+              <li>Desenvolvimento e manutenção de scripts, consultas e integrações para automações e troca de informações entre sistemas.</li>
+              <li>Apoio à especificação, documentação, testes e acompanhamento de correções de incidentes técnicos.</li>
+            </ul>
+          </li>
+          <li class="timeline__item reveal">
+            <p class="timeline__date mono">ago. 2022 — mai. 2024</p>
+            <h3>Aprendiz Assistente Administrativo <span>@ Agile Corp</span></h3>
+            <ul>
+              <li>Suporte a atividades e fluxos administrativos, com conhecimento de processos operacionais e rotinas empresariais.</li>
+            </ul>
+          </li>
+          <li class="timeline__item reveal">
+            <p class="timeline__date mono">ago. 2018 — jan. 2020</p>
+            <h3>Aprendiz em Comércio e Varejo <span>@ Lojas Americanas</span></h3>
+            <ul>
+              <li>Rotinas de loja, organização operacional e atendimento, desenvolvendo comunicação e colaboração.</li>
+            </ul>
+          </li>
+          <li class="timeline__item timeline__item--edu reveal">
+            <p class="timeline__date mono">em andamento</p>
+            <h3>Tecnologia da Informação <span>@ FAETERJ Petrópolis</span></h3>
+            <ul>
+              <li>Graduação.</li>
+            </ul>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- HABILIDADES -->
+    <section id="habilidades" class="section">
+      <div class="container">
+        <h2 class="section__title reveal"><span class="mono">03.</span> Habilidades</h2>
+        <div class="skills">
+          <div class="skill-card reveal">
+            <h3>Back-end</h3>
+            <ul class="tags">
+              <li>PHP</li><li>Python</li><li>APIs REST/HTTP</li><li>JSON</li><li>PDO</li><li>Composer</li>
+            </ul>
+          </div>
+          <div class="skill-card reveal">
+            <h3>Front-end</h3>
+            <ul class="tags">
+              <li>HTML5</li><li>CSS3</li><li>JavaScript</li><li>Bootstrap</li><li>Responsividade</li>
+            </ul>
+          </div>
+          <div class="skill-card reveal">
+            <h3>Mobile</h3>
+            <ul class="tags">
+              <li>React Native</li><li>Expo</li><li>Notificações</li><li>Armazenamento local</li>
+            </ul>
+          </div>
+          <div class="skill-card reveal">
+            <h3>Dados</h3>
+            <ul class="tags">
+              <li>MySQL</li><li>Oracle SQL</li><li>Firebase</li><li>Tratamento de dados</li><li>Relatórios</li>
+            </ul>
+          </div>
+          <div class="skill-card reveal">
+            <h3>Integrações e automação</h3>
+            <ul class="tags">
+              <li>LDAP</li><li>E-mail</li><li>PDFs</li><li>QR codes</li><li>Códigos de barras</li><li>Rotinas agendadas</li>
+            </ul>
+          </div>
+          <div class="skill-card reveal">
+            <h3>Sistemas corporativos</h3>
+            <ul class="tags">
+              <li>ERP Senior Sapiens</li><li>eDocs</li><li>HCM</li><li>NF-e</li><li>Análise de logs</li>
+            </ul>
+          </div>
+          <div class="skill-card reveal">
+            <h3>Ferramentas</h3>
+            <ul class="tags">
+              <li>Git</li><li>GitHub</li><li>Docker</li><li>Postman</li><li>VS Code</li><li>Laragon</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJETOS -->
+    <section id="projetos" class="section">
+      <div class="container">
+        <h2 class="section__title reveal"><span class="mono">04.</span> Projetos</h2>
+        <div class="filters reveal" role="tablist">
+          <button class="filter is-active" data-filter="todos">Todos</button>
+          <button class="filter" data-filter="front">Front-end</button>
+          <button class="filter" data-filter="back">Back-end</button>
+        </div>
+        <div class="projects">
+          <article class="project reveal" data-cat="front">
+            <div class="project__thumb project__thumb--1"><span>📋</span></div>
+            <div class="project__body">
+              <h3>TaskFlow</h3>
+              <p>Quadro Kanban com arrastar e soltar, prioridades, busca e dados salvos no navegador.</p>
+              <ul class="tags tags--small"><li>HTML</li><li>CSS</li><li>JavaScript</li><li>LocalStorage</li></ul>
+              <div class="project__links">
+                <a href="projetos/taskflow/" class="link">Ver projeto →</a>
+                <a href="https://github.com/KwL-21/portfolio/tree/main/projetos/taskflow" class="link link--muted" target="_blank" rel="noopener">Código</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="project reveal" data-cat="front">
+            <div class="project__thumb project__thumb--2"><span>⛅</span></div>
+            <div class="project__body">
+              <h3>Clima Agora</h3>
+              <p>App de previsão do tempo que consome uma API pública, com busca de cidades e geolocalização.</p>
+              <ul class="tags tags--small"><li>JavaScript</li><li>Fetch API</li><li>Async/Await</li></ul>
+              <div class="project__links">
+                <a href="projetos/clima/" class="link">Ver projeto →</a>
+                <a href="https://github.com/KwL-21/portfolio/tree/main/projetos/clima" class="link link--muted" target="_blank" rel="noopener">Código</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="project reveal" data-cat="back">
+            <div class="project__thumb project__thumb--3"><span>💰</span></div>
+            <div class="project__body">
+              <h3>FinanSys</h3>
+              <p>Controle financeiro pessoal com login, cadastro de receitas e despesas e resumo mensal.</p>
+              <ul class="tags tags--small"><li>PHP</li><li>MySQL</li><li>PDO</li><li>Sessões</li></ul>
+              <div class="project__links">
+                <a href="projetos/finansys/" class="link" data-php>Ver projeto →</a>
+                <a href="https://github.com/KwL-21/portfolio/tree/main/projetos/finansys" class="link link--muted" target="_blank" rel="noopener">Código</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="project reveal" data-cat="front">
+            <div class="project__thumb project__thumb--4"><span>🛒</span></div>
+            <div class="project__body">
+              <h3>ShopLite</h3>
+              <p>Loja virtual com catálogo, filtros, carrinho de compras, cupons e frete calculado pelo CEP.</p>
+              <ul class="tags tags--small"><li>JavaScript</li><li>Estado</li><li>ViaCEP</li><li>UI</li></ul>
+              <div class="project__links">
+                <a href="projetos/shoplite/" class="link">Ver projeto →</a>
+                <a href="https://github.com/KwL-21/portfolio/tree/main/projetos/shoplite" class="link link--muted" target="_blank" rel="noopener">Código</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="project reveal" data-cat="back">
+            <div class="project__thumb project__thumb--5"><span>🔗</span></div>
+            <div class="project__body">
+              <h3>API de Links</h3>
+              <p>API REST em PHP para encurtar URLs, com contagem de cliques, estatísticas por dia e documentação interativa.</p>
+              <ul class="tags tags--small"><li>PHP</li><li>REST</li><li>JSON</li><li>MySQL</li></ul>
+              <div class="project__links">
+                <a href="projetos/linkapi/" class="link" data-php>Ver projeto →</a>
+                <a href="https://github.com/KwL-21/portfolio/tree/main/projetos/linkapi" class="link link--muted" target="_blank" rel="noopener">Código</a>
+              </div>
+            </div>
+          </article>
+        </div>
+        <p class="projects__more reveal">
+          Também atuo em sistemas corporativos, integrações, automações e apps mobile em repositórios privados.
+          <a href="https://github.com/KwL-21" target="_blank" rel="noopener" class="link">Ver meu GitHub →</a>
+        </p>
+      </div>
+    </section>
+
+    <!-- CONTATO -->
+    <section id="contato" class="section contact">
+      <div class="container contact__inner reveal">
+        <h2 class="section__title section__title--center"><span class="mono">05.</span> Contato</h2>
+        <p>Vamos construir algo juntos? Se quiser conversar sobre um projeto ou uma oportunidade, é só mandar uma mensagem!</p>
+        <div class="contact__actions">
+          <a href="mailto:contatodevkwl@gmail.com" class="btn">Enviar e-mail</a>
+          <a href="assets/curriculo.pdf" class="btn btn--ghost" download="Curriculo_Kawa_Lucio.pdf">Baixar currículo</a>
+        </div>
+        <p class="contact__email mono">contatodevkwl@gmail.com</p>
+        <div class="socials">
+          <a href="https://github.com/KwL-21" target="_blank" rel="noopener">GitHub</a>
+          <span>📍 Duque de Caxias/RJ</span>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p class="mono">Desenvolvido por Kawã Lucio · DEV-KwL · <span id="ano"></span></p>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

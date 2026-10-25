@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Clima Agora</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <a href="../../#projetos" class="back">← Portfólio</a>
+
+  <main class="app">
+    <h1 class="logo">⛅ Clima Agora</h1>
+
+    <form class="search" id="form-busca" autocomplete="off">
+      <input type="search" id="cidade" placeholder="Digite uma cidade..." aria-label="Cidade" required>
+      <button type="submit" aria-label="Buscar">🔍</button>
+      <button type="button" id="local" title="Usar minha localização" aria-label="Usar minha localização">📍</button>
+      <ul class="suggestions" id="sugestoes" hidden></ul>
+    </form>
+
+    <p class="status" id="status" hidden></p>
+
+    <section class="current" id="atual" hidden>
+      <p class="current__place" id="local-nome"></p>
+      <div class="current__main">
+        <span class="current__icon" id="icone"></span>
+        <span class="current__temp" id="temp"></span>
+      </div>
+      <p class="current__desc" id="descricao"></p>
+      <div class="current__details">
+        <div><span>Sensação</span><strong id="sensacao"></strong></div>
+        <div><span>Umidade</span><strong id="umidade"></strong></div>
+        <div><span>Vento</span><strong id="vento"></strong></div>
+      </div>
+    </section>
+
+    <section class="forecast" id="previsao" hidden>
+      <h2>Próximos dias</h2>
+      <div class="forecast__list" id="dias"></div>
+    </section>
+  </main>
+
+  <footer class="credit">Dados: <a href="https://open-meteo.com/" target="_blank" rel="noopener">Open-Meteo</a></footer>
+
+  <script src="app.js"></script>
+</body>
+</html>

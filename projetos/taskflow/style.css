@@ -1,0 +1,143 @@
+:root {
+  --bg: #f1f5f9;
+  --col: #e2e8f0;
+  --card: #ffffff;
+  --text: #0f172a;
+  --muted: #64748b;
+  --accent: #6366f1;
+  --baixa: #22c55e;
+  --media: #f59e0b;
+  --alta: #ef4444;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: "Inter", system-ui, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  min-height: 100vh;
+}
+
+.topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+  padding: 16px 24px;
+  background: linear-gradient(135deg, #0ea5e9, #6366f1);
+  color: #fff;
+}
+.topbar__left, .topbar__right { display: flex; align-items: center; gap: 12px; }
+.topbar h1 { font-size: 1.4rem; }
+.back { color: #fff; text-decoration: none; font-size: 1.3rem; opacity: .8; }
+.back:hover { opacity: 1; }
+
+#busca {
+  padding: 10px 14px;
+  border-radius: 8px;
+  border: 0;
+  width: 220px;
+  font: inherit;
+}
+
+.btn {
+  font: inherit;
+  font-weight: 600;
+  padding: 10px 16px;
+  border-radius: 8px;
+  border: 0;
+  cursor: pointer;
+  background: var(--accent);
+  color: #fff;
+  transition: filter .2s;
+}
+.btn:hover { filter: brightness(1.1); }
+.topbar .btn { background: #fff; color: var(--accent); }
+.btn--ghost { background: transparent; color: var(--muted); }
+.btn--danger { background: var(--alta); }
+
+.board {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  padding: 24px;
+  align-items: start;
+}
+
+.column { background: var(--col); border-radius: 12px; padding: 14px; }
+.column__header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px; }
+.column__header h2 { font-size: 1rem; }
+.count { background: #fff; border-radius: 999px; padding: 2px 10px; font-size: .8rem; font-weight: 600; color: var(--muted); }
+
+.column__list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  min-height: 120px;
+  border-radius: 8px;
+  transition: background .2s;
+}
+.column__list.is-over { background: rgba(99,102,241,.12); outline: 2px dashed var(--accent); }
+
+.card {
+  background: var(--card);
+  border-radius: 10px;
+  padding: 14px;
+  box-shadow: 0 1px 3px rgba(0,0,0,.08);
+  cursor: grab;
+  position: relative;
+  border-left: 4px solid var(--media);
+  transition: transform .15s, box-shadow .15s;
+}
+.card:hover { box-shadow: 0 6px 16px rgba(0,0,0,.1); transform: translateY(-2px); }
+.card:focus-visible { outline: 2px solid var(--accent); }
+.card.is-dragging { opacity: .4; }
+.card[data-prio="baixa"] { border-left-color: var(--baixa); }
+.card[data-prio="alta"] { border-left-color: var(--alta); }
+
+.card__prio {
+  font-size: .7rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: .04em;
+  color: var(--muted);
+}
+.card__title { font-size: .95rem; margin: 4px 0; }
+.card__desc { font-size: .85rem; color: var(--muted); white-space: pre-wrap; }
+.card__desc:empty { display: none; }
+.card__footer { margin-top: 8px; font-size: .75rem; color: var(--muted); }
+.card__prazo.is-late { color: var(--alta); font-weight: 600; }
+.card[data-status="done"] .card__title { text-decoration: line-through; color: var(--muted); }
+
+.empty { text-align: center; color: var(--muted); font-size: .85rem; padding: 24px 0; }
+
+dialog {
+  border: 0;
+  border-radius: 14px;
+  padding: 24px;
+  width: min(460px, calc(100% - 32px));
+  margin: auto;
+  box-shadow: 0 20px 50px rgba(0,0,0,.25);
+}
+dialog::backdrop { background: rgba(15,23,42,.5); }
+dialog h2 { margin-bottom: 16px; }
+dialog label { display: flex; flex-direction: column; gap: 6px; font-size: .85rem; font-weight: 600; margin-bottom: 14px; flex: 1; }
+dialog input, dialog textarea, dialog select {
+  font: inherit;
+  font-weight: 400;
+  padding: 10px;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+}
+dialog input:focus, dialog textarea:focus, dialog select:focus { outline: 2px solid var(--accent); border-color: transparent; }
+.row { display: flex; gap: 12px; }
+.modal__actions { display: flex; gap: 8px; margin-top: 8px; }
+.spacer { flex: 1; }
+
+@media (max-width: 800px) {
+  .board { grid-template-columns: 1fr; }
+  #busca { width: 100%; }
+  .topbar__right { width: 100%; }
+}

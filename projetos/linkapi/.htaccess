@@ -1,0 +1,13 @@
+RewriteEngine On
+
+# /api/links e /api/links/{codigo} -> api/index.php
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^api/.*$ api/index.php [L,QSA]
+
+# /r/{codigo} -> r.php?c={codigo}
+RewriteRule ^r/([A-Za-z0-9_-]+)/?$ r.php?c=$1 [L,QSA]
+
+# Arquivos internos não devem ser acessados pelo navegador
+<FilesMatch "^(config\.php|database\.sql|README\.md)$">
+    Require all denied
+</FilesMatch>

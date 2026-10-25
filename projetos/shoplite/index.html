@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ShopLite — Loja Virtual</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="container topbar__inner">
+      <div class="topbar__left">
+        <a href="../../#projetos" class="back" title="Voltar ao portfólio">←</a>
+        <a href="./" class="logo">🛒 Shop<span>Lite</span></a>
+      </div>
+      <input type="search" id="busca" class="search" placeholder="O que você procura?" aria-label="Buscar produtos">
+      <button class="cart-btn" id="abrir-carrinho" aria-label="Abrir carrinho">
+        🛍️ <span class="cart-btn__count" id="contador">0</span>
+      </button>
+    </div>
+  </header>
+
+  <section class="banner">
+    <div class="container">
+      <p class="banner__tag">Projeto demonstrativo</p>
+      <h1>Frete grátis acima de R$ 299</h1>
+      <p>Use o cupom <strong>BEMVINDO10</strong> e ganhe 10% de desconto na primeira compra.</p>
+    </div>
+  </section>
+
+  <main class="container shop">
+    <aside class="filters" aria-label="Filtros">
+      <h2>Categorias</h2>
+      <div class="chips" id="categorias"></div>
+
+      <h2>Preço máximo</h2>
+      <input type="range" id="preco" min="0" max="600" step="10" value="600" aria-label="Preço máximo">
+      <p class="range-label">Até <strong id="preco-label">R$ 600</strong></p>
+
+      <label class="check"><input type="checkbox" id="promo"> Só promoções</label>
+
+      <button class="link-btn" id="limpar">Limpar filtros</button>
+    </aside>
+
+    <section>
+      <div class="toolbar">
+        <p id="resultado"></p>
+        <select id="ordem" aria-label="Ordenar por">
+          <option value="relevancia">Mais relevantes</option>
+          <option value="menor">Menor preço</option>
+          <option value="maior">Maior preço</option>
+          <option value="nota">Melhor avaliados</option>
+          <option value="nome">Nome (A–Z)</option>
+        </select>
+      </div>
+      <div class="grid" id="produtos"></div>
+    </section>
+  </main>
+
+  <!-- Carrinho lateral -->
+  <div class="overlay" id="overlay" hidden></div>
+  <aside class="cart" id="carrinho" aria-label="Carrinho" aria-hidden="true">
+    <header class="cart__header">
+      <h2>Seu carrinho</h2>
+      <button class="icon-btn" id="fechar-carrinho" aria-label="Fechar carrinho">✕</button>
+    </header>
+
+    <div class="cart__items" id="itens"></div>
+
+    <footer class="cart__footer" id="rodape-carrinho">
+      <form class="inline-form" id="form-cupom">
+        <input id="cupom" placeholder="Cupom de desconto" aria-label="Cupom" autocomplete="off">
+        <button class="btn btn--outline">Aplicar</button>
+      </form>
+      <p class="hint" id="cupom-msg"></p>
+
+      <form class="inline-form" id="form-cep">
+        <input id="cep" placeholder="CEP (ex.: 01001-000)" inputmode="numeric" maxlength="9" aria-label="CEP" autocomplete="off">
+        <button class="btn btn--outline">Calcular</button>
+      </form>
+      <p class="hint" id="frete-msg"></p>
+
+      <dl class="totals">
+        <div><dt>Subtotal</dt><dd id="subtotal"></dd></div>
+        <div class="totals__desconto" id="linha-desconto" hidden><dt>Desconto</dt><dd id="desconto"></dd></div>
+        <div><dt>Frete</dt><dd id="frete">—</dd></div>
+        <div class="totals__total"><dt>Total</dt><dd id="total"></dd></div>
+      </dl>
+      <button class="btn btn--full" id="finalizar">Finalizar compra</button>
+    </footer>
+  </aside>
+
+  <dialog id="sucesso">
+    <div class="success">
+      <div class="success__icon">🎉</div>
+      <h2>Pedido confirmado!</h2>
+      <p>Pedido <strong id="numero-pedido"></strong> no valor de <strong id="valor-pedido"></strong>.</p>
+      <p class="hint">Esta é uma loja demonstrativa — nenhuma cobrança foi feita.</p>
+      <form method="dialog"><button class="btn">Continuar comprando</button></form>
+    </div>
+  </dialog>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <script src="produtos.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
